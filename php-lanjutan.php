@@ -1,6 +1,6 @@
 <?php
 
-$nama = "Putu";
+// nama = "Putu";
 /*
 echo $nama ;
 echo "<br/>";
@@ -40,7 +40,7 @@ If ($nama == "Putu") {
     echo $nama."darimana ya?";
 }
 */
-
+/*
 switch($nama) {
     case "Putu":
     $pesan = $nama." adalah orang Bali";
@@ -55,6 +55,7 @@ default:
 
 echo $pesan;
 
+*/
 ?>
 
 <!DOCTYPE html>
@@ -62,12 +63,12 @@ echo $pesan;
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=<, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     <h1> Input Nama dan Diulang </h1>
-    <form action>="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+    <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
         <label>Nama</label>
         <inpu type="text" name="nama">
         <label>Jumlah</label>
@@ -78,23 +79,24 @@ echo $pesan;
         if(!empty($_POST['submit'])) {
 
             switch($_POST['nama']) {
-                case "Putu":
-                $pesan = $nama." adalah orang Bali";
+                case "Kikih":
+                $pesan = $_POST['nama']." adalah orang Bali";
             break ;
-            case "Budi":
-                $pesan = $nama." berasal dari pulau Jawa";
+            case "Bintang":
+                $pesan = $_POST['nama']." berasal dari pulau Jawa";
             break;
             default:
-                $pesan = $nama."darimana ya?";
+                $pesan = $_POST['nama']."darimana ya?";
 
             }
             
             for ($i=0;$i<$_POST['no'];$i++){
-                       
+                    echo $pesan. "<br>";   
             }
-        }else{
 
-            echo" Amda belum input nama dan jumlah";
+        } else {
+
+            echo" Anda belum input nama dan jumlah";
         }    
         ?>
 </body>
